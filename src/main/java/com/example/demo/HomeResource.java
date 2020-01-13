@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeResource {
+    // specifies that the http request to be performed is Get on a path to a controller method specified in (...)
     @GetMapping("/")
     public String home() {
         return ("<h1>Welcome</h1>");

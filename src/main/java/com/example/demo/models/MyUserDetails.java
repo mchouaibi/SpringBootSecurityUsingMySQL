@@ -9,6 +9,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*
+    Implements UserDetails interface which provides core user information.
+    Implementations are not used directly by Spring Security for security purposes. They simply store user information which is later encapsulated into Authentication objects. This allows non-security related user information to be stored in a convenient location.
+ */
+
 public class MyUserDetails implements UserDetails {
     private String username;
     private String password;
@@ -28,8 +33,6 @@ public class MyUserDetails implements UserDetails {
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }
-
-
 
     public MyUserDetails() {
     }

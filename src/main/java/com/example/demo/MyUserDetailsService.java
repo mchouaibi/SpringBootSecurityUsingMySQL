@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+// Indicates that this class is a service class
+// A service class is used to write the business logic of the app
 @Service
 public class MyUserDetailsService implements UserDetailsService {
     @Autowired
